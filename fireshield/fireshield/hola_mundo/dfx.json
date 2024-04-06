@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "hola_mundo_backend": {
+      "main": "src/hola_mundo_backend/main.mo",
+      "type": "motoko"
+    },
+    "hola_mundo_frontend": {
+      "dependencies": [
+        "hola_mundo_backend"
+      ],
+      "source": [
+        "src/hola_mundo_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "hola_mundo_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "fireshield_backend": {
+      "build": "npx azle fireshield_backend",
+      "candid": "src/fireshield_backend/fireshield_backend.did",
+      "gzip": true,
+      "main": "src/fireshield_backend/src/index.ts",
+      "type": "custom",
+      "wasm": ".azle/fireshield_backend/fireshield_backend.wasm"
+    },
+    "fireshield_frontend": {
+      "dependencies": [
+        "fireshield_backend"
+      ],
+      "source": [
+        "src/fireshield_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "fireshield_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
